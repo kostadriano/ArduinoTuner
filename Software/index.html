@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Tuner</title>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="scripts/tuner.js"></script>
+	<script>
+		window.addEventListener('load', init_tuner, false);
+
+		var tuner;
+
+		function init_tuner() {
+			tuner = new Tuner({});
+		}
+
+	</script>
+</head>
+
+<body>
+
+	<div class="tuner tuner-ui-debug">
+
+		<h1>Arduino Tuner</h1>
+		<table>
+			<tbody>
+				<tr>
+					<td>
+						<strong>Base Frequency</strong>
+					</td>
+					<td class="tuner-data base-frequency">--</td>
+				</tr>
+				<tr>
+					<td>
+						<strong>Instrument</strong>
+					</td>
+					<td class="tuner-data instrument">--</td>
+				</tr>
+				<tr>
+					<td>
+						<strong>Tuning</strong>
+					</td>
+					<td class="tuner-data tuning">--</td>
+				</tr>
+				<tr>
+					<td>
+						<strong>Tuning information</strong>
+					</td>
+					<td class="tuner-data tuning-info">--</td>
+				</tr>
+			</tbody>
+		</table>
+		<br/>
+		<br/>
+
+		<strong>Waveform</strong>
+		<br/>
+		<td>
+			<canvas id="waveform" width="380" height="60"></canvas>
+		</td>
+		<br/>
+		<br/>
+
+		<table>
+			<tbody>
+				<tr>
+					<td>
+						<strong>Frequency (Hz)</strong>
+					</td>
+					<td class="tuner-data frequency">--</td>
+				</tr>
+				<tr>
+					<td>
+						<strong>Note Index</strong>
+					</td>
+					<td class="tuner-data note-index">--</td>
+				</tr>
+				<tr>
+
+					<td>
+						<strong>Note</strong>
+					</td>
+					<td class="tuner-data note">--</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<br/>
+	<h2>Current String</h2>
+	<h3>
+		<div id="currentString"></div>
+	</h3>
+	<div id="buttons">
+		<button type="button" id="stringE">E</button>
+		<button type="button" id="stringA">A</button>
+		<button type="button" id="stringD">D</button>
+		<button type="button" id="stringG">G</button>
+		<button type="button" id="stringB">B</button>
+		<button type="button" id="stringe">e</button>
+	</div>
+</body>
+
+</html>
